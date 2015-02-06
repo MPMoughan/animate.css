@@ -1,9 +1,9 @@
 #Animate.css
 
 
-Forked repo for animate.css on 2/5/2015
-Added index.html file to play around with animate a bit
-Matt Moughan
+- Forked repo for animate.css on 2/5/2015
+- Added index.html file to play around with animate a bit
+- index.html added by Matt Moughan
 
 
 
