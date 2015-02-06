@@ -12,17 +12,23 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 
 
 <style>
 
+  document {
+    background-color: gray;
+  }
   div {
     text-align:center;
     margin-top: 50px;
+    background-color: #a1d9e8;
   }
 
 </style>
@@ -41,14 +47,26 @@
 <input type="text" class="name" placeholder="Enter your name">
 <br>
 <br>
-<button class="thisButton btn primary">SUBMIT</button>
+<button class="thisButton">SUBMIT</button>
 
 </div>
 
 
 <script>
 
-  $('.button').addClass('animated bounceOutLeft');
+$( document ).ready(function() {
+    console.log( "jquery and animate.css fun!!!" );
+
+  var animationName = 'animated shake'
+  var animationVendor = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+  $('.thisButton').on('click', function() {
+    $('.name').addClass(animationName).one(animationVendor, function(){
+      $(this).removeClass(animationName)
+
+    });
+  })
+});
 
 </script>
 
